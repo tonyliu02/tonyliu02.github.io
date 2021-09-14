@@ -1,0 +1,180 @@
+body {
+  background-color: black;
+}
+
+#gameTitle {
+  font-family: Bookman, URW Bookman L, serif;
+  font-weight: bolder;
+  color: #FFFFFF;
+  font-variant: small-caps;
+  font-size: 38px;
+}
+
+#rules {
+  background-color: azure;
+  border: outset; 
+  height: auto;
+  /* set margin to auto to horizontally center the rules area */
+  margin: auto;
+}
+
+#rulesTitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+#rulesDescription { 
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 1.5vmax;
+}
+
+#boardContainer {
+  margin-top: 20px;
+  /* horizontally center the board background image */
+  text-align: center;
+}
+
+#boardBg {
+  /* make the board background image shrink and enlarge based on the size of its containing box */
+  max-width: 100%;
+  height: auto;
+  /* make the board image background */
+  z-index: 0;
+}
+
+/* specs of the game board */
+#boardContentContainer {
+  width: 100%;
+  top: 0px;
+  /* horizontally center the board container */
+  margin: auto;
+  /* content lays on the background image */
+  z-index: 1;
+  
+}
+
+#messageArea {
+  top: 0px;
+  left: 0px;
+  color: rgb(83, 175, 19);
+}
+
+/* =============== begin player input area ============= */
+#playerInput {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0px 10px 10px 10px;
+  background-color: rgb(83, 175, 19);
+}
+
+#playerInput input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 1400px) {
+  #playerInput {
+    top: -10px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #playerInput {
+    top: -10px;
+    font-size: 0.8em;
+  }
+
+  #playerInput input {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #boardContainer {
+    margin-top: 30px;
+  }
+  #playerInput {
+    top: -20px;
+    font-size: 0.7em;
+  }
+
+  #playerInput input {
+    font-size: 0.7em;
+  }
+}
+
+
+/* ============== end player input area ============ */
+
+/* the overlaying grid area on the board */
+table#grid {
+  top: 11%;
+  left: 16.5%;
+  width: 66.2%;
+  height: 79%;
+  border-spacing: 0px;
+}
+
+/* properties of the "hit" and "miss" symbols */
+.hit {
+  background: transparent url("assets/ship-sm.png") no-repeat center center;
+}
+
+.miss {
+  background: transparent url("assets/miss-sm.png") no-repeat center center;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px), (max-width: 900px) {
+  .hit {
+    background: transparent url("assets/ship-xs.png") no-repeat center center;
+  }
+  
+  .miss {
+    background: transparent url("assets/miss-xs.png") no-repeat center center;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  .hit {
+    background: transparent url("assets/ship.png") no-repeat center center;
+  }
+  
+  .miss {
+    background: transparent url("assets/miss.png") no-repeat center center;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .hit {
+    background: transparent url("assets/ship-xxs.png") no-repeat center center;
+  }
+  
+  .miss {
+    background: transparent url("assets/miss-xxs.png") no-repeat center center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hit {
+    background: transparent url("assets/ship-xxxs.png") no-repeat center center;
+  }
+  
+  .miss {
+    background: transparent url("assets/miss-xxxs.png") no-repeat center center;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .hit {
+    background: transparent url("assets/ship-xxxxs.png") no-repeat center center;
+  }
+  
+  .miss {
+    background: transparent url("assets/miss-xxxxs.png") no-repeat center center;
+  }
+}
+
+
